@@ -1,32 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import Playlist from './components/Playlist/Playlist';
 import SearchBar from './components/SearchBar/SearchBar';
 import SearchResults from './components/SearchResults/SearchResults';
-import Track from './components/Track/Track';
-import TrackList from './components/Tracklist/Tracklist';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           We Be Jammmin' Project
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 class App extends React.Component {
   constructor(props) {
@@ -62,6 +38,7 @@ class App extends React.Component {
   }
 
   savePlaylist() {
+    // @todo use trackUris to in Spotify API to find songs
     const trackUris = this.state.playlistTracks.map(track => track.uri);
     // Code to save playlist to Spotify goes here
     this.setState({
@@ -72,7 +49,22 @@ class App extends React.Component {
 
   search(term) {
     // Code to search for tracks on Spotify goes here
-    this.setState({searchResults: [{name: 'track1', artist: 'artist1', album: 'album1', id: '1'}, {name: 'track2', artist: 'artist2', album: 'album2', id: '2'}]});
+    this.setState({searchResults: 
+      [
+        // @todo hard code search results for now
+        {name: 'Friends', artist: 'Emmit Fenn', album: 'Friends', id: '1'}, 
+        {name: 'Horus', artist: 'EarthLife', album: 'India', id: '2'},
+        {name: 'funny', artist: 'Golden Vessel', album: 'everythingeverydayeverything', id: '2'},
+        {name: 'Right Thing', artist: 'Bayonne', album: 'Right Thing', id: '3'},
+        {name: 'Oh Laura', artist: 'SG Lewis', album: 'AudioLust & HigherLove', id: '4'},
+        {name: 'Good Days', artist: 'SZA', album: 'Good Days', id: '5'},
+        {name: 'Fortanach', artist: 'Sebastian Plano', album: 'Fortanach', id: '6'},
+        {name: 'Holocene', artist: 'Bon Iver', album: 'Bon Iver', id: '7'},
+        {name: 'Brand New Key', artist: 'Melanie', album: 'Beautiful People: The Greatest Hits of Melanie', id: '8'},
+        {name: 'Tell The Vision', artist: 'Pop Smoke', album: 'Faith', id: '9'},
+        {name: 'Eyes', artist: 'Rogue Wave', album: 'Eyes', id: '10'},
+      ]
+    });
   }
 
   render() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackList from '../Tracklist/Tracklist';
+import Tracklist from '../Tracklist/Tracklist';
 
 class Playlist extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class Playlist extends React.Component {
     return (
       <div className="Playlist">
         <input defaultValue={'New Playlist'} onChange={this.handleNameChange} />
-        <TrackList tracks={this.props.playlistTracks} onRemove={this.props.onRemove} isRemoval={true} />
+        <Tracklist tracks={this.props.playlistTracks} onRemove={this.props.onRemove} isRemoval={true} />
       </div>
     );
   }
