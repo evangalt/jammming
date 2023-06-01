@@ -39,7 +39,7 @@ class App extends React.Component {
 
   savePlaylist() {
     // @todo use trackUris to in Spotify API to find songs
-    const trackUris = this.state.playlistTracks.map(track => track.uri);
+    // const trackUris = this.state.playlistTracks.map(track => track.uri);
     // Code to save playlist to Spotify goes here
     this.setState({
       playlistName: 'New Playlist',
