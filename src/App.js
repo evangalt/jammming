@@ -70,7 +70,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>My Spotify Playlist</h1>
+        <h1>Create a Spotify Playlist</h1>
         <div className="App-playlist">
           <SearchBar onSearch={this.search} />
           <div className="App-playlist-save">
