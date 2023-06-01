@@ -2,37 +2,67 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 56px;
+  margin-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.SearchBar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.SearchBar input {
+  width: 60%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.SearchBar button {
+  width: 25%;
+  height: 40px;
+  background-color: #1db954;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.SearchResults, .Playlist {
+  flex: 1;
+}
+
+.TrackList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282828;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.Track h3, .Track p {
+  margin: 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Track-action {
+  cursor: pointer;
+  font-size: 24px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
